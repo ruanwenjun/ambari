@@ -233,11 +233,13 @@ CREATE TABLE repo_definition (
 CREATE TABLE repo_tags (
   repo_definition_id BIGINT NOT NULL,
   tag VARCHAR(255) NOT NULL,
+  PRIMARY KEY (repo_definition_id),
   CONSTRAINT FK_repo_tag_definition_id FOREIGN KEY (repo_definition_id) REFERENCES repo_definition (id));
 
 CREATE TABLE repo_applicable_services (
   repo_definition_id BIGINT NOT NULL,
   service_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (repo_definition_id),
   CONSTRAINT FK_repo_app_service_def_id FOREIGN KEY (repo_definition_id) REFERENCES repo_definition (id));
 
 CREATE TABLE servicecomponentdesiredstate (
@@ -1118,6 +1120,7 @@ CREATE TABLE alert_target (
 CREATE TABLE alert_target_states (
   target_id BIGINT NOT NULL,
   alert_state VARCHAR(255) NOT NULL,
+  PRIMARY KEY (target_id),
   FOREIGN KEY (target_id) REFERENCES alert_target(target_id)
 );
 

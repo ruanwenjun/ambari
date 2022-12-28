@@ -21,6 +21,10 @@
           7
         ]
       },
+      "kylin10" : {
+        "distro": ["kylin"],
+        "version": [10]
+      },
       "redhat-ppc": {
         "extends" : "redhat",
         "distro": [

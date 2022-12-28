@@ -52,4 +52,6 @@ class Register:
                  'prefix'            : self.config.get('agent', 'prefix'),
                  'agentStartTime'    : self.init_time_ms
                }
+    register['hardwareProfile']['operatingsystem'] = "kylin10"
+    register['hardwareProfile']['operatingsystem'] = "10"
     return register
